@@ -7,18 +7,18 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
-            height: 100%;
+            height: 100vh; /* Высота экрана */
         }
         #content {
             border: 1px solid #ccc;
             padding: 20px;
-            flex: 1;
+            flex: 1; /* Контент растягивается на доступное пространство */
             overflow-y: auto;
+            margin-bottom: 50px; /* Отступ для кнопок внизу */
         }
         .tabs {
             display: flex;
@@ -31,7 +31,7 @@
         }
         .tab {
             flex: 1;
-            padding: 10px 0;
+            padding: 20px 0;
             cursor: pointer;
             text-align: center;
             background-color: #f0f0f0;
@@ -61,7 +61,6 @@
     </script>
 </head>
 <body>
-    <!-- <h1>Бронирование тура</h1> -->
     <div id="content">Загрузка...</div>
     <div class="tabs">
         <div class="tab active" id="about" onclick="loadPage('about')">О нас</div>

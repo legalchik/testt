@@ -22,7 +22,7 @@
             padding: 20px;
             flex: 1;
             overflow-y: auto;
-            margin-bottom: 70px;
+            /* margin-bottom: 70px; */
         }
         .tabs {
             z-index: 1000;
@@ -36,12 +36,11 @@
             left: 50%;
             transform: translateX(-50%);
             box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
-            padding: 10px 0;
+            padding: 8px 0;
             border-radius: 12px 12px 0 0;
         }
         .tab {
             flex: 1;
-            padding: 14px 0;
             cursor: pointer;
             text-align: center;
             background-color: transparent;
@@ -50,6 +49,7 @@
             font-weight: bold;
             color: #727272;
             /* border-radius: 6px; */
+            
         }
         .tab:last-child {
             border-right: none;
@@ -57,6 +57,7 @@
         .tab i {
             font-size: 28px; /* Размер иконок */
             transition: all 0.3s ease;
+            padding: 25px;
         }
         .tab.active {
             color: #000000;
@@ -64,7 +65,7 @@
         .tab.active i {
             background-color: rgba(0, 0, 0, 0.1);
             border-radius: 20%; /* Круглая рамка вокруг иконки */
-            padding: 6px;
+            padding: 30px;
         }
         .tab.active:hover i {
             background-color: rgba(0, 0, 0, 0.15); /* Тёмный цвет при наведении на активную иконку */

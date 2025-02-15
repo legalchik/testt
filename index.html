@@ -1,32 +1,72 @@
-<html>
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-  <style>
-    body {
-    color: black;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(158, 0, 0); 
-    }
-    h1 { color: black; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронирование тура</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        #content {
+            border: 1px solid #ccc;
+            padding: 20px;
+            flex: 1;
+            overflow-y: auto;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #fff;
+            border-top: 1px solid #ccc;
+        }
+        .tab {
+            flex: 1;
+            padding: 10px 0;
+            cursor: pointer;
+            text-align: center;
+            background-color: #f0f0f0;
+            border-right: 1px solid #ccc;
+        }
+        .tab:last-child {
+            border-right: none;
+        }
+        .tab.active {
+            background-color: #ddd;
+        }
+    </style>
+    <script>
+        function loadPage(page) {
+            fetch(page + '.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('content').innerHTML = data;
+                    document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+                    document.getElementById(page).classList.add('active');
+                });
+        }
+        
+        document.addEventListener("DOMContentLoaded", () => {
+            loadPage('about');
+        });
+    </script>
 </head>
 <body>
-  <h1>Welcome</h1>
-  <h1>Welcome</h1>
-  <h1>Welcome</h1>
-  <h1>Welcome</h1>
-  <h1>Welcome</h1>
-  <h1>Welcome</h1>
-  <h1>Welcome</h1>
-  <h1>Welcome</h1>
-  <h1>Welcome</h1>
-  <h1>Welcome</h1>
-  <h1>Welcome</h1>
-  <h1>Welcome</h1>
-  <h1>Welcome</h1>
-  <h1>Welcome</h1>
-  <h1>Welcome</h1>
-  <h1>Welcome</h1>
-  <h1>Welcome</h1>
+    <!-- <h1>Бронирование тура</h1> -->
+    <div id="content">Загрузка...</div>
+    <div class="tabs">
+        <div class="tab active" id="about" onclick="loadPage('about')">О нас</div>
+        <div class="tab" id="howto" onclick="loadPage('howto')">Как забронировать</div>
+        <div class="tab" id="booking" onclick="loadPage('booking')">Бронирование</div>
+    </div>
 </body>
 </html>

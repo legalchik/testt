@@ -1,1 +1,85 @@
-<h1>3   </h1>
+<style>
+    .booking {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        padding: 0px;
+        background-color: var(--background-color);
+        color: #333;
+        margin: 0;
+    }
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(170, 170, 170, 0.1);
+    }
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #2c3e50;
+    }
+    p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    label {
+        font-size: 14px;
+        margin-bottom: 5px;
+        color: #555;
+    }
+    input, textarea {
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    textarea {
+        resize: vertical;
+        height: 100px;
+    }
+    button {
+        padding: 10px;
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #2980b9;
+    }
+    .note {
+        font-size: 12px;
+        color: #777;
+        text-align: center;
+        margin-top: 10px;
+    }
+</style>
+<booking>
+    <div class="container">
+        <h1>ЕСЛИ У ВАС ЕСТЬ ВОПРОСЫ И ПОЖЕЛАНИЯ</h1>
+        <p>ОСТАВЬТЕ СВОИ КОНТАКТЫ, МЫ СВЯЖЕМСЯ С ВАМИ В БЛИЖАЙШЕЕ ВРЕМЯ</p>
+        
+        <form>
+            <label for="phone">Номер телефона</label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 (999) 999-99-99" required>
+
+            <label for="question">Ваш вопрос</label>
+            <textarea id="question" name="question" placeholder="Введите интересующий Вас вопрос" required></textarea>
+
+            <button type="submit">Отправить</button>
+        </form>
+
+        <p class="note">Нажимая на кнопку, вы соглашаетесь с условиями конфиденциальности</p>
+    </div>
+</booking>

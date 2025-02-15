@@ -49,6 +49,29 @@
         color: #e74c3c;
         font-weight: bold;
     }
+    .contact-email {
+        font-size: 18px;
+        color: #485488;
+        text-decoration: none;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    .contact-email:hover {
+        text-decoration: underline;
+    }
+    .image-container {
+        margin-top: 20px;
+    }
+    .image-container img {
+        max-width: 100%;
+        height: 50px;
+        border-radius: 8px;
+    }
+    .center {
+        display: flex;
+        justify-content: center;
+    }
 </style>
 <div class="about">
     <div class="container">
@@ -59,5 +82,17 @@
         <li><span class="highlight">Гарантия лучшей цены</span> и постоянная поддержка 24/7.</li>
         <li><span class="highlight">Прозрачное оформление</span> документов.</li>
     </ul>
+    </div>
+    <div class="container">
+        <p class="center">Свяжитесь с нами по электронной почте:</p>
+        
+        <!-- Место для вставки изображений -->
+        <div class="image-container center" >
+            <img src="static/inst.svg" alt="Изображение 1">
+            <img src="static/tg.svg" alt="Изображение 2">
+            <img src="static/vk.png" alt="Изображение 2">
+        </div>
+
+        <a href="mailto:4.storony@mail.ru" class="contact-email">4.storony@mail.ru</a>
     </div>
 </div>
